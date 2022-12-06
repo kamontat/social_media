@@ -1,0 +1,11 @@
+<h1>Home</h1>
+<a href="/account/signout">Signout</a>
+
+<ul>
+  {% for user in users %}
+  <li>
+    {{ user.username }} - {{ user.email }}
+    <a href="/account/delete?userid={{ user.id }}">(Delete)</a>
+  </li>
+  {% endfor %}
+</ul>
